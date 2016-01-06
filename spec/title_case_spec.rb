@@ -21,4 +21,8 @@ describe('String#title_case') do
   it("will ignore special characters") do
     expect("./,;123 string".title_case).to(eq("./,;123 String"))
   end
+
+  it("will ignore reserved words") do
+    expect("green Eggs and ham".title_case).to(eq("Green Eggs and Ham"))
+  end
 end
